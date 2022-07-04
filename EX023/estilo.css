@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* { font-family: Georgia, 'Times New Roman', Times, serif;};
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table.tabsimples {
+    width: 400px;
+    height: 400px;
+    border-collapse:collapse;
+}
+table.tabsimples > tbody > tr > td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+table.tabcomp {
+    width: 500px;
+    border-collapse: collapse;
+}
+table.tabcomp > thead, tfoot {
+    background-color: rgba(20, 210, 248, 0.594);
+}
+table.tabcomp > thead, tfoot > tr >th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+.num {
+    text-align: right;
+}
