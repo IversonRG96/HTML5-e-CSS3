@@ -22,15 +22,32 @@ table.tabsimples > tbody > tr > td {
 table.tabcomp {
     width: 500px;
     border-collapse: collapse;
+    position: relative;
 }
-table.tabcomp > thead, tfoot {
-    background-color: rgba(20, 210, 248, 0.594);
+
+table.tabcomp > caption {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding: 10px;
+}
+table.tabcomp > thead > tr > th {
+    position: sticky;
+    background-color:rgb(20, 210, 248) ;
+    top: -1px;
+}
+   
+table.tabcomp > thead, tfoot, caption {
+    background-color: rgb(20, 210, 248);
 }
 table.tabcomp > thead, tfoot > tr >th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
+}
+table.tabcomp > tbody > tr:nth-child(even){
+    background-color: rgba(114, 191, 219, 0.257);
 }
 .num {
     text-align: right;
