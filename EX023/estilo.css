@@ -52,3 +52,13 @@ table.tabcomp > tbody > tr:nth-child(even){
 .num {
     text-align: right;
 }
+
+table.tabmesc {
+    width: 300px;
+    border-collapse: collapse;
+}
+
+table.tabmesc > thead > tr > th {
+    border: 1px solid black;
+    text-align: center;
+}
