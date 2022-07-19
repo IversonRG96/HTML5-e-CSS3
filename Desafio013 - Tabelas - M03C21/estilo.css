@@ -2,6 +2,7 @@
 
 * {font-family: Arial, Helvetica, sans-serif}
 
+/************ Deasafio 013 - I ***********/
 table {
     width: 400px;
     border-collapse: separate;
@@ -9,4 +10,28 @@ table {
 
 table > thead > tr > th {
     border: 1px solid black;
+}
+
+/************ Deasafio 013 - II ***********/
+.tabnotas {    
+    border-collapse: collapse;
+    text-align: center;
+    width: 600px;
+
+}
+.tabnotas > thead , .tabnotas > tbody > tr > th, td.backgreytd {
+    background-color: rgb(118, 116, 116);
+    color: white;
+    padding: 3px;
+}
+.tabnotas > thead > tr > th , .tabnotas > tbody > tr > th, .tabnotas > tbody > tr {
+    border: 2px solid black;
+}
+.tabnotas > tbody > tr > td {
+    border: 2px solid black;
+    padding: 3px;
+}
+.tabnotas > tbody > tr > th.areas {
+    background-color: rgb(197, 197, 197);
+    color: black;
 }
