@@ -32,14 +32,34 @@ section.telefone {
     background: url('../imagens/frame-iphone.png') no-repeat;
 }
 
-section > iframe.home {
+section > iframe.tela {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 269px;
-    height: 480px;
-    background: url('../imagens/tela-home.jpg') fixed no-repeat top center;
+    width: 270px;
+    height: 481px;
+    background-color: black;
     background-size: cover;
     
+}
+
+section.redes-sociais {
+    text-align: right;    
+}
+
+section.redes-sociais > a > img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.50);
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+section.redes-sociais > a > img:hover {
+    border: 2px solid white;
+    transform: translate(-15px, -0px);
+    transition: transform .3s, border 1s;
+
 }
