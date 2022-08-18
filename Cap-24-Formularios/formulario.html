@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+        <h1>Formulário</h1>
+        <section>
+            <h2>Text - Submit - Reset</h2>
+            <form action="formulario.php" method="post" autocomplete="on">
+                <div>
+                    <label for="inome"> Nome Completo*: </label>
+                    <input type="text" name="nome" id="inome" autocomplete="username" placeholder="Nome Completo" required>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+        <section>
+            <form action="formulario.php" method="post">
+                <h2>Number - Data - Hora - Fieldset</h2>
+                <fieldset>
+                    <legend>Dados do Aluno </legend>
+                    <div>
+                        <label for="inome"> Nome Completo*: </label>
+                        <input type="text" name="nome" id="inome" autocomplete="username" placeholder="Nome Completo" required>
+                    </div> 
+                </fieldset><br>
+                <fieldset>
+                    <legend> Dados das Atividades </legend>
+                    <div>
+                        <label for="idata"> Data: </label>
+                        <input type="date" name="data" id="idata" required>
+                    </div>
+                    <div>
+                        <label for="ihora"> Horário: </label>
+                        <input type="time" name="hora" id="ihora" required>
+                    </div>
+                    <div>
+                        <label for="inotaa"> Nota da Atividade*: </label>
+                        <input type="number" name="notaa" id="inotaa" min="0" max="10" step="0.1" required>
+                    </div>
+                    <div>
+                        <label for="inotat"> Nota do Trabalho*: </label>
+                        <input type="number" name="notat" id="inotat" min="0" max="10" step="0.1" required>
+                    </div>
+                    <div>
+                        <label for="inotap"> Nota da Prova*:</label>
+                        <input type="number" name="notap" id="inotap" min="0" max="10" step="0.1" required>
+                    </div>
+                </fieldset>
+                    <div>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </div>
+            </form>
+        </section>
+        <section>
+            <form action="formulario.php" method="post">
+                <h2>Email - Tel</h2>
+                <div>
+                    <label for="itel"> Telefone: </label>
+                    <input type="tel" name="tel" id="itel" pattern="^\d{2}\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx">
+                </div>
+                <div>
+                    <label for="iemail"> E-mail: </label>
+                    <input type="email" name="email" id="iemail" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+        <section>
+            <form action="formulario.php" method="post">
+                <h2>Checkbox - Radio</h2>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <div>
+                        <label for="imas"> Masculino </label>
+                        <input type="radio" name="sexo" id="imas">
+                    </div>
+                    <div>
+                        <label for="ifem"> Feminino </label>
+                        <input type="radio" name="sexo" id="ifem">
+                    </div>
+                </fieldset><br>
+                <fieldset>
+                    <legend>Esporte</legend>
+                    <div>
+                        <input type="checkbox" name="bas" id="ibas">
+                        <label for="ibas">Basquete</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="fut" id="ifut">
+                        <label for="ifut">Futebol</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="nat" id="inat">
+                        <label for="inat">Natação</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="golf" id="igolf">
+                        <label for="igolf">Golf</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="box" id="ibox">
+                        <label for="ibox">Box</label>
+                    </div>
+                </fieldset>
+                <div><input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+        <section>
+            <form action="formulario.php" method="post">
+                <h2>Color - Range - File</h2>
+                <div>
+                    <label for="icor">Escolha uma Cor: </label>
+                    <input type="color" name="cor" id="icor">
+                </div>
+                <div>
+                    <label for="inotaat">Nota de Atendimento: </label>
+                    <input type="range" name="notaat" id="inotaat" min="0" max="10" oninput="ivalor.innerHTML = Number(inotaat.value)" value="5">
+                    <output id="ivalor">5</output>
+                </div>
+                <div>
+                    <label for="iarq">Adicione um Arquivo: </label>
+                    <input type="file" name="arq" id="iarq">
+                </div>
+                <div><input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+        <section>
+            <form action="formulario.php" method="post" autocomplete="on">
+                <h2>Select - Datalist - TextArea</h2>
+                <fieldset>
+                    <legend>Localização</legend>
+                    <div>
+                        <label for="iestado">Estado:</label>
+                        <select name="estado" id="iestado">
+                            <option value="">---escolha-uma-opção---</option>
+                            <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="RS">Rio Grande do Sul</option>   
+                            </optgroup>
+                            <optgroup label="Região Sudeste">
+                                <option value="SP">São Paulo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="ES">Espirito Santo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                            </optgroup>
+                            <optgroup label="Região Centro-Oeste">
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="GO">Goiáis</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="Brasilia">Brasilia</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend> Profissão</legend>
+                    <div>
+                        <label for="iprof">Profissão</label>
+                        <input type="text" name="prof" id="iprof" list="listprof">
+                        <datalist id="listprof">
+                            <option value="Consultor"></option>
+                            <option value="Administrador"></option>
+                            <option value="Reporter"></option>
+                            <option value="Desenvolvedor"></option>
+                            <option value="Autônomo"></option>
+                            <option value="Promotor"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Mensagem</legend>
+                    <div>
+                        <label for="itext">Digite a sua mensagem:</label></div>
+                        <textarea name="text" id="itext" cols="30" rows="10"></textarea>
+                    
+                </fieldset>
+                <div><input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
